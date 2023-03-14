@@ -30,8 +30,8 @@ class ArangoService(config: ArangoConfig, mapper: ObjectMapper) {
     fun orderRoundTrip(): Order {
         return adb.db().query(
             "RETURN @order",
-            mapOf("order" to Order("pizza", 11.22, Date())),
-            Order::class.java
+            Order::class.java,
+            mapOf("order" to Order("pizza", 11.22, Date()))
         ).first()
     }
 
