@@ -1,7 +1,7 @@
 # arango-micronaut-native-example project
 
-Example application using ArangoDB Java driver integrated with: 
-- [Micronaut configuration](./src/main/kotlin/com/example/ArangoConfig.kt)   
+Example application using ArangoDB Java driver integrated with:
+- [Micronaut configuration](./src/main/kotlin/com/example/ArangoConfig.kt)
 - [Micronaut serialization](./src/main/kotlin/com/example/ArangoService.kt)
 - [native image](#native-image)
 

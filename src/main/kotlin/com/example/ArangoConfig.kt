@@ -4,7 +4,6 @@ package com.example
 import com.arangodb.config.ArangoConfigProperties
 import com.arangodb.config.HostDescription
 import io.micronaut.context.annotation.ConfigurationProperties
-import io.micronaut.serde.*
 import java.util.*
 
 @ConfigurationProperties("adb")

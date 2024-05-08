@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: maven
+features: [annotation-api, app-name, assertj, graalvm, http-client-test, jackson-databind, junit, kapt, kotlin, kotlin-application, logback, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, micronaut-test-rest-assured, netty-server, properties, readme, serialization-jackson, shade, static-resources, validation]
