@@ -12,6 +12,8 @@ class ArangoService(config: ArangoConfig, mapper: ObjectMapper) {
 
     private val adb: ArangoDB = ArangoDB.Builder()
         .loadProperties(ArangoConfigAdapter(config))
+
+        // ArangoSerde implementation based on Micronaut serialization
         .serde(object : ArangoSerde {
             override fun serialize(value: Any?): ByteArray {
                 return mapper.writeValueAsBytes(value)
