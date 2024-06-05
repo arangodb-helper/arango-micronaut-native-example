@@ -10,7 +10,7 @@ Example application using ArangoDB Java driver integrated with:
 Start a local database:
 
 ```shell script
-./docker/start_db.sh
+SSL=true ./docker/start_db.sh
 ``` 
 
 ## test
@@ -19,10 +19,25 @@ Start a local database:
 mvn test
 ```
 
+## test shaded
+
+```shell script
+mvn test -Dshaded
+```
+
 ## native image
 
 ```shell script
 mvn package -Dpackaging=native-image
+./target/demo
+curl -X GET http://localhost:8080/version
+curl -X GET http://localhost:8080/order
+```
+
+## native image shaded
+
+```shell script
+mvn package -Dpackaging=native-image -Dshaded
 ./target/demo
 curl -X GET http://localhost:8080/version
 curl -X GET http://localhost:8080/order
