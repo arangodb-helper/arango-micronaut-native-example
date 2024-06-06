@@ -23,6 +23,7 @@
         <exec.mainClass>com.example.ApplicationKt</exec.mainClass>
         <kotlinVersion>1.9.23</kotlinVersion>
         <adb.version>7.7.0-SNAPSHOT</adb.version>
+        <graalvm.version>24.0.1</graalvm.version>
     </properties>
 
     <repositories>
@@ -316,7 +317,34 @@
                     <artifactId>arangodb-java-driver</artifactId>
                     <version>${adb.version}</version>
                 </dependency>
+                <dependency>
+                    <groupId>org.graalvm.sdk</groupId>
+                    <artifactId>graal-sdk</artifactId>
+                    <version>24.0.1</version>
+                    <scope>provided</scope>
+                </dependency>
             </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>add-source</goal>
+                                </goals>
+                                <configuration>
+                                    <sources>
+                                        <source>${project.basedir}/src/native/java</source>
+                                    </sources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
         <profile>
             <id>shaded</id>
