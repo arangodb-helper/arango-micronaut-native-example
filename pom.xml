@@ -22,7 +22,7 @@
         <micronaut.runtime>netty</micronaut.runtime>
         <exec.mainClass>com.example.ApplicationKt</exec.mainClass>
         <kotlinVersion>1.9.23</kotlinVersion>
-        <adb.version>7.7.0-SNAPSHOT</adb.version>
+        <adb.version>7.7.0</adb.version>
         <graalvm.version>24.0.1</graalvm.version>
     </properties>
 
