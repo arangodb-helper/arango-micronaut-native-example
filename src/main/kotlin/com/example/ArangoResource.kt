@@ -10,7 +10,7 @@ import io.micronaut.serde.annotation.SerdeImport
 
 @Controller("/")
 @SerdeImport(ArangoDBVersion::class)
-class HelloController(private val svc: ArangoService) {
+class ArangoResource(private val svc: ArangoService) {
 
     @Get("/version")
     @Produces(MediaType.APPLICATION_JSON)
